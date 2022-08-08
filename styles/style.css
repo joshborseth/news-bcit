@@ -109,7 +109,7 @@ svg:not(.forbes-logo) {
 /* main styles */
 h1 {
   margin: 4rem 2rem;
-  border-bottom: solid var(--black-color) 1px;
+  border-bottom: solid var(--black-color) 2px;
   padding-bottom: 1rem;
   text-align: center;
   font-size: 1.5rem;
@@ -133,11 +133,18 @@ article {
 }
 article:hover,
 article:focus {
-  background-color: var(--accent-color);
+  background-color: var(--black-color);
   color: white;
 }
 article img {
   width: 300px;
+}
+article:first-of-type img {
+  width: 750px;
+}
+article:first-of-type {
+  background-color: black;
+  color: white;
 }
 @media (min-width: 56.25em) {
   h1 {
