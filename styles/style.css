@@ -32,6 +32,9 @@ header {
   align-items: center;
   height: 5rem;
   background-color: var(--black-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .main-navigation {
   position: absolute;
@@ -108,31 +111,36 @@ svg:not(.forbes-logo) {
 
 /* main styles */
 h1 {
-  margin: 4rem 2rem;
-  border-bottom: solid var(--black-color) 2px;
-  padding-bottom: 1rem;
-  text-align: center;
   font-size: 1.5rem;
+  width: 75%;
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+  border-bottom: var(--line-seperator);
 }
 main {
-  margin-bottom: 5rem;
+  margin: 10rem 0;
 }
 article {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column-reverse;
-  gap: 2rem;
   width: 75%;
   margin: 0 auto;
-  padding: 5rem 0;
+  padding: 3rem 0;
   border-bottom: var(--line-seperator);
-  padding: 2rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-article:hover,
-article:focus {
+article:not(article:first-of-type) {
+  cursor: pointer;
+  padding: 2rem;
+  gap: 2rem;
+}
+.article-info :first-child {
+  font-size: 0.75rem;
+}
+article:hover:not(article:first-of-type:hover),
+article:focus:not(article:first-of-type:focus) {
   background-color: var(--black-color);
   color: white;
 }
@@ -140,11 +148,7 @@ article img {
   width: 300px;
 }
 article:first-of-type img {
-  width: 750px;
-}
-article:first-of-type {
-  background-color: black;
-  color: white;
+  width: 600px;
 }
 @media (min-width: 56.25em) {
   h1 {
@@ -152,6 +156,11 @@ article:first-of-type {
   }
   article {
     flex-direction: row;
+  }
+  article:first-of-type {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 /* footer styles */
