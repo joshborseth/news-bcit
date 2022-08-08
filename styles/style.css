@@ -1,3 +1,10 @@
+:root {
+  --black-color: black;
+  --white-color: white;
+  --accent-color: rgb(215, 0, 0);
+  --line-seperator: solid 1px grey;
+}
+
 body {
   font-family: work-sans, sans-serif;
   font-weight: 400;
@@ -5,7 +12,7 @@ body {
 }
 a,
 a:visited {
-  color: white;
+  color: var(--white-color);
   text-decoration: none;
 }
 a:focus,
@@ -24,11 +31,11 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 5rem;
-  background-color: black;
+  background-color: var(--black-color);
 }
 .main-navigation {
   position: absolute;
-  background-color: black;
+  background-color: var(--black-color);
   width: 100%;
   text-align: right;
 }
@@ -36,7 +43,7 @@ header {
   margin: 2rem;
 }
 path {
-  fill: white;
+  fill: var(--white-color);
 }
 path.forbes-logo-path {
   transform: scale(0.4);
@@ -58,11 +65,11 @@ svg:not(.forbes-logo) {
 }
 .nav-btn {
   background-color: transparent;
-  background-color: rgb(215, 0, 0);
+  background-color: var(--accent-color);
   font-weight: 700;
   padding: 0.75rem;
   border: 0;
-  color: white;
+  color: var(--white-color);
   border-radius: 0.5rem;
   font-size: 0.8rem;
 }
@@ -99,12 +106,13 @@ svg:not(.forbes-logo) {
   }
 }
 
-/* header styles */
+/* main styles */
 h1 {
   margin: 4rem 2rem;
-  border-bottom: solid black 1px;
+  border-bottom: solid var(--black-color) 1px;
   padding-bottom: 1rem;
   text-align: center;
+  font-size: 1.5rem;
 }
 main {
   margin-bottom: 5rem;
@@ -118,19 +126,30 @@ article {
   width: 75%;
   margin: 0 auto;
   padding: 5rem 0;
-  border-bottom: solid grey 1px;
+  border-bottom: var(--line-seperator);
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+article:hover,
+article:focus {
+  background-color: var(--accent-color);
+  color: white;
 }
 article img {
   width: 300px;
 }
 @media (min-width: 56.25em) {
+  h1 {
+    font-size: 2rem;
+  }
   article {
     flex-direction: row;
   }
 }
 /* footer styles */
 .footer-nav {
-  background-color: black;
+  background-color: var(--black-color);
   height: 5rem;
   display: flex;
   justify-content: center;
