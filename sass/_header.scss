@@ -14,10 +14,11 @@ header {
   background-color: variables.$black-color;
   width: 100%;
   text-align: right;
+  & li {
+    margin: 2rem;
+  }
 }
-.main-navigation ul li {
-  margin: 2rem;
-}
+
 path {
   fill: variables.$white-color;
 }
@@ -71,13 +72,13 @@ svg:not(.forbes-logo) {
   }
   .main-navigation {
     position: static;
-  }
-  .main-navigation ul {
-    display: flex;
-    justify-content: flex-start;
-    gap: 2rem;
-  }
-  .main-navigation ul li {
-    margin: 0;
+    & ul {
+      display: flex;
+      justify-content: flex-start;
+      gap: 2rem;
+      & li {
+        margin: 0;
+      }
+    }
   }
 }

@@ -7,15 +7,18 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-a,
-a:visited {
+a {
   color: variables.$white-color;
   text-decoration: none;
+  &:visited {
+    @extend a;
+  }
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
 }
-a:focus,
-a:hover {
-  text-decoration: underline;
-}
+
 ul {
   list-style-type: none;
 }
