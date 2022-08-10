@@ -1,0 +1,27 @@
+@use "variables" as variables;
+body {
+  font-family: work-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a {
+  color: variables.$white-color;
+  text-decoration: none;
+  &:visited {
+    @extend a;
+  }
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}
