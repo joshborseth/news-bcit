@@ -1,0 +1,15 @@
+@use "variables" as variables;
+.footer-nav {
+  background-color: variables.$black-color;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}

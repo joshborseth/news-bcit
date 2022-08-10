@@ -1,0 +1,56 @@
+@use "mixins" as mixins;
+@use "variables" as variables;
+
+h1 {
+  font-size: 1.5rem;
+  width: 75%;
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+  @include mixins.line-seperator(border-bottom);
+}
+main {
+  margin: 10rem 0;
+}
+article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column-reverse;
+  width: 75%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  @include mixins.line-seperator(border-bottom);
+  transition: all 0.3s ease-in-out;
+}
+article:not(article:first-of-type) {
+  cursor: pointer;
+  padding: 2rem;
+  gap: 2rem;
+}
+.article-info :first-child {
+  font-size: 0.75rem;
+}
+article:hover:not(article:first-of-type:hover),
+article:focus:not(article:first-of-type:focus) {
+  background-color: variables.$black-color;
+  color: variables.$white-color;
+}
+article img {
+  width: 300px;
+}
+article:first-of-type img {
+  width: 600px;
+}
+@media (min-width: 56.25em) {
+  h1 {
+    font-size: 2rem;
+  }
+  article {
+    flex-direction: row;
+  }
+  article:first-of-type {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

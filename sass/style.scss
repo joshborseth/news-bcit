@@ -1,0 +1,27 @@
+@use "header";
+@use "main";
+@use "footer";
+@use "variables" as variables;
+body {
+  font-family: work-sans, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+a,
+a:visited {
+  color: variables.$white-color;
+  text-decoration: none;
+}
+a:focus,
+a:hover {
+  text-decoration: underline;
+}
+ul {
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
+}
+.hidden {
+  display: none;
+}

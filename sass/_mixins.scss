@@ -1,0 +1,3 @@
+@mixin line-seperator($side) {
+  #{$side}: solid 1px grey;
+}
